@@ -25,11 +25,11 @@ export const useHeader = () => {
     (isAboutPage ? 'bg-[#FFFFFF33] backdrop-blur-[75px] shadow-[0px_4px_4px_0px_#0000000A]' : 'bg-[#00000033] backdrop-blur-[75px] shadow-[0px_4px_4px_0px_#0000000A]')
     : 'bg-transparent';
   
-  const textColor = (isScrolled || isAboutPage) ? 'text-[#2E333D]' : 'text-white';
-  const activeTextColor = (isScrolled || isAboutPage) ? 'text-[#824435]' : 'text-white';
-  const logoSrc = (isScrolled || isAboutPage) ? '/amor-logo-color.png' : '/amor-logo.png';
-  const menuIconSrc = (isScrolled || isAboutPage) ? '/hamburger_menu_black.png' : '/hamburger_menu.png';
-  const iconColor = (isScrolled || isAboutPage) ? 'text-[#2E333D]' : 'text-white';
+  const textColor = isAboutPage ? 'text-[#2E333D]' : 'text-white';
+  const activeTextColor = isAboutPage ? 'text-[#824435]' : 'text-white';
+  const logoSrc = isAboutPage ? '/amor-logo-color.png' : '/amor-logo.png';
+  const menuIconSrc = isAboutPage ? '/hamburger_menu_black.png' : '/hamburger_menu.png';
+  const iconColor = isAboutPage ? 'text-[#2E333D]' : 'text-white';
 
   return {
     isMenuOpen,
